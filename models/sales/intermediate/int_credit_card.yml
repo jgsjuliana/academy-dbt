@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: int_credit_card
+    columns:
+      - name: id
+        description: The primary key of credit_card table
+        tests:
+        - unique
+        - not_null

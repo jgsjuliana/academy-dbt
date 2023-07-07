@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: int_order_detail
+    columns:
+      - name: id
+        description: The primary key of order detail table
+        tests:
+        - unique
+        - not_null

@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: int_sales_reason
+    columns:
+      - name: id
+        description: The primary key of order reasons table
+        tests:
+        - not_null
