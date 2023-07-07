@@ -1,0 +1,109 @@
+version: 2
+
+sources:
+  - name: raw_adventureworks
+    description: This is a replica of the BigQuery database used by our project.
+    tables:
+      - name: salesorderheader
+        description: >
+          General information of sales order.
+        columns:
+          - name: salesorderid
+            description: Primary key of orders table
+            tests:
+              - unique
+              - not_null
+
+      - name: salesorderdetail
+        description: >
+          Products linked to a specific sales order.
+        columns:
+          - name: salesorderdetailid
+            description: Primary key of orders detail table
+            tests:
+              - unique
+              - not_null
+
+      - name: product
+        description: >
+          Table with detailed product information.
+        columns:
+          - name: productid
+            description: Primary key of products table
+            tests:
+              - unique
+              - not_null
+
+      - name: creditcard
+        description: >
+          Table with detailed payment method information.
+        columns:
+          - name: creditcardid
+            description: Primary key of credit cards table
+            tests:
+              - unique
+              - not_null
+
+      - name: salesorderheadersalesreason
+        description: >
+          intermediate table between salesreasonheader e salesreason.
+
+      - name: salesreason
+        description: >
+          Table with detailed reason for sale information.
+        columns:
+          - name: salesreasonid
+            description: Primary key of sales reason table
+            tests:
+              - unique
+              - not_null
+
+      - name: customer
+        description: >
+          Table with detailed customer information.
+        columns:
+          - name: customerid
+            description: Primary key of customers table
+            tests:
+              - unique
+              - not_null
+
+      - name: person
+        description: >
+          Table with detailed person information.
+        columns:
+          - name: businessentityid
+            description: Primary key of person table
+            tests:
+              - unique
+              - not_null
+
+      - name: address
+        description: >
+          Table with detailed customer address and city information.
+        columns:
+          - name: addressid
+            description: Primary key of address table
+            tests:
+              - unique
+              - not_null
+
+      - name: stateprovince
+        description: >
+          Table with detailed customer state information.
+        columns:
+          - name: stateprovinceid
+            description: Primary key of states table
+            tests:
+              - unique
+              - not_null
+
+      - name: countryregion
+        description: >
+          Table with detailed customer country information.
+        columns:
+          - name: countryregioncode
+            description: Primary key of country table
+            tests:
+              - unique
+              - not_null
