@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: fct_order_detail
+    columns:
+      - name: id
+        description: The primary key of order detail table
+        tests:
+        - unique
+        - not_null
+
+    columns:
+      - name: credit_card_fk
+        description: The foreign key of credit card table
+        tests:
+        - not_null
+
+    columns:
+      - name: customer_fk
+        description: The foreign key of customer table
+        tests:
+        - not_null
+
+    columns:
+      - name: location_fk
+        description: The foreign key of location table
+        tests:
+        - not_null
+
+    columns:
+      - name: product_fk
+        description: The foreign key of product table
+        tests:
+        - not_null
+
+    columns:
+      - name: sales_reason_fk
+        description: The foreign key of sales reasons table
+        tests:
+        - not_null
+
+    columns:
+      - name: sales_order_id
+        description: The key of sales order
+        tests:
+        - not_null

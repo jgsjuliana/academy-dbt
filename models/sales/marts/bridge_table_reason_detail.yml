@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: bridge_table_reason_detail
+    columns:
+      - name: aux_reason_sk
+        description: The surrogate key of a brisge table between sales reason and order detail.

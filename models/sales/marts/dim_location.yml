@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dim_location
+    columns:
+      - name: location_sk
+        description: The surrogate key of location table
+        tests:
+        - unique
+        - not_null
