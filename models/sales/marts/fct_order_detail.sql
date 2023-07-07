@@ -57,8 +57,8 @@ with
                 when order_detail.status = 1 then 'Pending'
                 when order_detail.status = 2 then 'In Progress'
                 when order_detail.status = 3 then 'Shipped'
-                when order_detail.status = 4 then 'Delivered'
-                when order_detail.status = 5 then 'Cancelled'
+                when order_detail.status = 4 then 'Cancelled'
+                when order_detail.status = 5 then 'Delivered'
                 when order_detail.status = 6 then 'Returned'
                 else 'Unknown'
             end as status

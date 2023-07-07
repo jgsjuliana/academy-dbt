@@ -24,7 +24,11 @@ with
             , customer.person_id
             , person.person_type
             , person.title
-            , concat(person.first_name, ' ', person.middle_name, ' ', person.last_name) as full_name
+            , case
+                when person.middle_name is not null
+                    then concat(person.first_name, ' ', person.middle_name, ' ', person.last_name)
+                else concat(person.first_name, ' ', person.last_name)
+            end as full_name
         from customer
         left join person
             on customer.person_id = person.id
